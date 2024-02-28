@@ -4,12 +4,10 @@ class Solution {
         
         for (int i = 0; i < nums.length; i++) {
                 ans[i] = nums[i];
+                for (int j = ans.length / 2; j < ans.length; j++) {
+                    ans[j] = nums[j - nums.length];
+                    }
         }
-        
-        for (int i = ans.length / 2; i < ans.length; i++) {ans[i] = nums[i - nums.length];
-
-        }
-
         return ans;
     }
 }
