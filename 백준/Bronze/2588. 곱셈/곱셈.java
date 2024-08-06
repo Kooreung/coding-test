@@ -1,20 +1,19 @@
-import java.util.Scanner;
+import java.io.*;
 
-    public class Main {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            int A = scanner.nextInt();
-            int B = scanner.nextInt();
-            int answer1,answer2,answer3,answer4;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String a = br.readLine();
+        String b = br.readLine();
+        String[] bSplit = b.split("");
+        int i = Integer.parseInt(a) * Integer.parseInt(bSplit[2]);
+        int j = Integer.parseInt(a) * Integer.parseInt(bSplit[1]);
+        int k = Integer.parseInt(a) * Integer.parseInt(bSplit[0]);
+        int l = Integer.parseInt(a) * Integer.parseInt(b);
 
-            answer1 = A * (B % 10);
-            answer2 = A * (B % 100 / 10);
-            answer3 = A * (B / 100);
-            answer4 = A * B;
-
-            System.out.println(answer1);
-            System.out.println(answer2);
-            System.out.println(answer3);
-            System.out.println(answer4);
-        }
+        System.out.println(i);
+        System.out.println(j);
+        System.out.println(k);
+        System.out.println(l);
+    }
 }
